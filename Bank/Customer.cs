@@ -10,8 +10,5 @@ namespace Bank
     {
         public string Name { get; set; }
         public Account Account { get; set; }
-
     }
-
-    
 }

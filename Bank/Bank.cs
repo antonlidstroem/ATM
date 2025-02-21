@@ -8,22 +8,28 @@ namespace Bank
 {
     internal class Bank
     {
-        public List<Customer> customers { get; set; }
+        public Customer[] customers { get; set; }
         public ATM Atm { get; set; }
         public Bank()
         {
             ATM Atm = new ATM();
-            List<Customer> customers = new List<Customer>();
+            Customer[] customers = new Customer[10];
             generateCustomers(customers);
             Atm.HandleMenu(customers);
         }
-        private void generateCustomers(List<Customer> customers)
+        private void generateCustomers(Customer[] customers)
         {
-            customers.Add(new Customer { Name = "Björn", Account = new Account { } });
-            customers.Add(new Customer { Name = "Ulf-Arne", Account = new Account { } });
-            customers.Add(new Customer { Name = "Britt-Marie", Account = new Account { } });
-            customers.Add(new Customer { Name = "Erika", Account = new Account { } });
-            customers.Add(new Customer { Name = "Måns", Account = new Account { } });
+            customers[0] = (new Customer { Name = "Björn", Account = new Account { } });
+            customers[1] = (new Customer { Name = "Ulf", Account = new Account { } });
+            customers[2] = (new Customer { Name = "Marie", Account = new Account { } });
+            customers[7] = (new Customer { Name = "Erika", Account = new Account { } });
+            customers[3] = (new Customer { Name = "Måns", Account = new Account { } });
+            customers[4] = (new Customer { Name = "Björn", Account = new Account { } });
+            customers[5] = (new Customer { Name = "Arne", Account = new Account { } });
+            customers[6] = (new Customer { Name = "Britt", Account = new Account { } });
+            customers[8] = (new Customer { Name = "Erika", Account = new Account { } });
+            customers[9] = (new Customer { Name = "Måns", Account = new Account { } });
+
         }
     }
 
